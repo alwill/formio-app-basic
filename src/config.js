@@ -1,4 +1,4 @@
-var APP_URL = 'https://example.form.io';
+var APP_URL = 'https://oupuvilgewvgvhe.form.io';
 var API_URL = 'https://api.form.io';
 
 // Parse query string
@@ -22,6 +22,14 @@ angular.module('formioAppBasic').constant('AppConfig', {
     user: {
       form: APP_URL + '/user',
       resource: 'UserResource'
+    },
+    album: {
+        form: APP_URL + '/album',
+        resource: 'AlbumResource'
+    },
+    picture: {
+      form: APP_URL + '/picture',
+      resource: 'PictureResource'
     }
   }
 });

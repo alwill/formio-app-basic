@@ -5,7 +5,8 @@
     'ui.router',
     'ui.bootstrap',
     'formio',
-    'ngFormioHelper'
+    'ngFormioHelper',
+    'bgf.paginateAnything'
   ])
   .config([
     '$locationProvider',
@@ -30,7 +31,7 @@
       FormioProvider.setAppUrl(AppConfig.appUrl);
       FormioProvider.setBaseUrl(AppConfig.apiUrl);
       FormioAuthProvider.setForceAuth(true);
-      FormioAuthProvider.setStates('auth.login', 'home');
+      FormioAuthProvider.setStates('auth.login', 'albumIndex');
       FormioAuthProvider.register('login', 'user', 'login');
       FormioAuthProvider.register('register', 'user', 'register');
 
@@ -45,7 +46,7 @@
         FormioResourceProvider.register(name, resource.form, $injector.get(resource.resource + 'Provider'));
       });
 
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/album');
     }
   ]);
 })();
